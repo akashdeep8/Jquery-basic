@@ -1,0 +1,90 @@
+
+	<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<title>JQUERY</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+	<style>
+	*
+	{
+		margin: 0px;
+		padding: 0px;
+	}
+		.green{
+			background-color: green;
+		}
+		.yellow{
+			background-color: yellow;
+		}
+		.p
+		{
+			text-align: center;
+			font-size: 60px;
+			font-family: Broadway;
+		}
+		#div
+		{
+			height: 30%;
+			width: 40%;
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-around;
+			margin-top: 5%;
+			margin-left: 30%;
+			
+			border-radius: 2px solid black;
+		}
+		body
+		{
+			background-image: linear-gradient(to right, purple , yellow);
+		}
+	</style>
+</head>
+<body>
+  
+  <p class="p">THIS PART OF HTML WILL BE AFFECTED FROM JQUERY FUNCTIONALITY</p>
+<div id="div">
+<button id="hide" class="btn btn-success">Hide</button>
+<button id="show" class="btn btn-success">Show</button>
+<button id="toggle" class="btn btn-success">Toggle</button>
+
+<button class="yellow1 btn btn-success">yellow</button>
+<button class="green1 btn btn-success">green</button>
+</div>
+
+
+<script >
+	$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
+  
+  $("#toggle").click(function(){
+  $("p").toggle();
+  });
+   
+  $(".yellow1").click(function(){
+  $("p").addClass("yellow").removeClass("green");
+  });
+  $(".green1").click(function(){
+  $("p").addClass("green").removeClass("yellow");
+  });
+   
+});
+</script>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>
